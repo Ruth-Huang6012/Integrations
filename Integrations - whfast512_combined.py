@@ -22,9 +22,9 @@ for line in file:
         break
 file.close()
 
-file = open('trial1.txt', 'w') ##output file
+file = open(system+'_output.txt', 'w') ##output file
 file.write("System\tIndex\tSimulation\tMass Ecc alternating \tIn. Semi-major and Final Semi-major and percentage difference alternating \tUnstable \n")
-num = 1
+num = 1 ##number of simulations
 length = len(f[system]['DefaultPriors']['PosteriorSample'])
 partition = length//num
 for index in range(num):
