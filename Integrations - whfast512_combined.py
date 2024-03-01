@@ -247,7 +247,7 @@ for index in range(num):
             sim.add(m = 0, P = P, h = k, k = h, ix = 2*np.sin(inc/2)*np.cos(Omega), iy = 2*np.sin(inc/2)*np.sin(Omega), l =l)
         sim.move_to_com()
     
-    print(sim.particles[:])
+    #print(sim.particles[:])
     ##integrate
     sim.dt = 0.09 *pmin
     sim.t = Epoch/365.25*2*np.pi
@@ -263,8 +263,8 @@ for index in range(num):
             for planet in range(npersim):
                 p.append(sim.particles[sys*(npersim+1)+1+planet])
         unstable = np.zeros(nsystems)
-        print(len(p))
-        print(smas)
+        #print(len(p))
+        #print(smas)
         for ind, particle in enumerate(p): #check for instability
             sys =  ind//npersim
             print(sys*(npersim+1))
@@ -278,7 +278,7 @@ for index in range(num):
     for sys in range(1,nsystems):
         for planet in range(npersim):
             p.append(sim.particles[sys*(npersim+1)+1+planet])
-    print(p)
+    #print(p)
     for ind, particle in enumerate(p): 
         if smas[ind]!=0:
             sys =  ind//npersim
